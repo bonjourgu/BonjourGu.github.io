@@ -232,31 +232,34 @@ h1{
 }
 
 /* ---------- publication tally ---------- */
-.tally{padding:56px 0 0}
+.tally{padding:48px 0 0}
 .tally-row{
-  margin:0;display:grid;grid-template-columns:1.15fr repeat(4,minmax(0,1fr));
-  border:1px solid var(--rule);border-radius:18px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);
+  margin:0;display:flex;flex-wrap:wrap;align-items:stretch;
+  border:1px solid var(--rule);border-radius:100px;overflow:hidden;background:var(--card);
 }
-.tcell{padding:22px 26px 20px;border-left:1px solid var(--rule-soft);display:flex;flex-direction:column;gap:10px}
+.tcell{
+  flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:11px 20px;border-left:1px solid var(--rule-soft);
+}
 .tcell:first-child{border-left:0}
 .tcell dt{
   display:flex;align-items:center;gap:9px;
-  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap;
 }
 .tcell dd{
-  margin:0;font-family:var(--serif);font-weight:300;font-size:52px;line-height:1;
-  letter-spacing:-.03em;color:var(--ink);font-variant-numeric:lining-nums tabular-nums;
+  margin:0;font-size:13px;font-weight:600;line-height:1;color:var(--ink);
+  font-variant-numeric:tabular-nums;
 }
-.tdot{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:none}
-.tdot .ico{width:13px;height:13px;stroke-width:2.2}
+.tdot{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none}
+.tdot .ico{width:11px;height:11px;stroke-width:2.4}
 .tcell.pub .tdot{background:var(--accent);color:var(--on-accent)}
 .tcell.acc .tdot{background:var(--accent-soft);color:var(--accent-ink)}
 .tcell.rev .tdot{background:var(--amber-soft);color:var(--amber)}
 .tcell.prep .tdot{border:1px dashed var(--muted);color:var(--muted)}
-.tcell.total{background:var(--accent);}
-.tcell.total dt{color:rgba(255,255,255,.78)}
-.tcell.total dt .ico{width:17px;height:17px}
-.tcell.total dd{color:#fff;font-weight:400}
+.tcell.total{background:var(--accent)}
+.tcell.total dt{color:rgba(255,255,255,.85)}
+.tcell.total dt .ico{width:16px;height:16px}
+.tcell.total dd{color:#fff}
 
 /* ---------- sections ---------- */
 .section{padding:104px 0 40px}
@@ -445,13 +448,13 @@ footer a:hover{border-bottom-color:var(--on-band)}
   .thesis .container{grid-template-columns:1fr;gap:12px;padding-top:52px;padding-bottom:52px}
   .qmark{width:40px;height:40px}
   .section{padding:72px 0 16px}
-  .tally{padding-top:40px}
-  .tally-row{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:16px}
-  .tcell{padding:16px 18px;border-left:0;border-top:1px solid var(--rule-soft)}
+  .tally{padding-top:36px}
+  .tally-row{border-radius:14px}
+  .tcell{flex:1 1 45%;justify-content:space-between;padding:10px 14px;border-left:0;border-top:1px solid var(--rule-soft)}
   .tcell:nth-child(odd):not(:first-child){border-left:1px solid var(--rule-soft)}
-  .tcell.total{grid-column:1 / -1;border-top:0;flex-direction:row;align-items:center;justify-content:space-between}
-  .tcell dd{font-size:40px}
-  .tcell dt{font-size:11px;letter-spacing:.05em;white-space:nowrap}
+  .tcell.total{flex-basis:100%;border-top:0}
+  .tcell dt{font-size:11.5px;letter-spacing:.04em}
+  .tcell dd{font-size:12.5px}
   .shead .badge{width:42px;height:42px;border-radius:12px}
 
   /* rail becomes a sticky header strip on narrow screens */
