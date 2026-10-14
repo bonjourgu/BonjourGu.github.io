@@ -414,7 +414,13 @@ h1{
   font-size:14px;color:var(--ink);padding:7px 14px;
   border:1px solid var(--rule);border-radius:100px;background:var(--card);
 }
-.venues em{font-style:normal;font-size:12.5px;font-weight:600;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.venues em{white-space:nowrap;font-style:normal;font-size:12.5px;font-weight:600;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.venues .vn{
+  min-width:22px;height:22px;padding:0 6px;margin-right:-6px;border-radius:100px;
+  display:inline-grid;place-items:center;
+  font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;
+  background:var(--accent);color:var(--on-accent);
+}
 
 /* ---------- nutshell ---------- */
 .nutshell{
@@ -506,6 +512,8 @@ footer a:hover{border-bottom-color:var(--on-band)}
   .vids{grid-template-columns:1fr}
   .works li{grid-template-columns:1fr;gap:10px;padding:18px 0}
   .ledger li{grid-template-columns:1fr;gap:4px;padding:14px 0}
+  .venues li{border-radius:14px;width:100%}
+  .venues em{margin-left:auto}
   .works .cite,.works .chip,.works .note{grid-column:1;grid-row:auto}
   .nutshell{grid-template-columns:1fr;gap:26px;padding:16px 16px 26px;border-radius:18px}
   .nutshell p{padding:0 6px}
@@ -833,12 +841,12 @@ footer a:hover{border-bottom-color:var(--on-band)}
           <div class="block">
             <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Conferences</p>
             <ul class="venues">
-              <li>Tobacco Regulatory Science Meeting<em>2024, 2026</em></li>
-              <li>International Communication Association<em>2025</em></li>
-              <li>Kentucky Conference on Health Communication<em>2026</em></li>
-              <li>Transcultural Nursing Society<em>2026</em></li>
-              <li>Korean Association of AD &amp; PR<em>2019</em></li>
-              <li>Korea Advertising Society<em>2019</em></li>
+              <li>Tobacco Regulatory Science Meeting<em>2024, 2026</em><span class="vn" aria-label="6 presentations">6</span></li>
+              <li>International Communication Association<em>2025</em><span class="vn" aria-label="1 presentation">1</span></li>
+              <li>Kentucky Conference on Health Communication<em>2026</em><span class="vn" aria-label="2 presentations">2</span></li>
+              <li>Transcultural Nursing Society<em>2026</em><span class="vn" aria-label="1 presentation">1</span></li>
+              <li>Korean Association of AD &amp; PR<em>2019</em><span class="vn" aria-label="1 presentation">1</span></li>
+              <li>Korea Advertising Society<em>2019</em><span class="vn" aria-label="1 presentation">1</span></li>
             </ul>
           </div>
           <div class="block">
