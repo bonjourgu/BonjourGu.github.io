@@ -386,6 +386,36 @@ h1{
 
 .othernote{margin:0;font-size:18px;line-height:1.75;color:var(--ink-2);max-width:42em}
 
+/* ---------- experience ---------- */
+.block + .block,.stats + .block,.stats + .ledger{margin-top:36px}
+.ledger{margin:0;padding:0;list-style:none}
+.ledger li{
+  display:grid;grid-template-columns:136px minmax(0,1fr);gap:4px 22px;
+  padding:16px 0;border-bottom:1px solid var(--rule-soft);
+}
+.ledger li:last-child{border-bottom:0}
+.ledger .when{
+  font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--accent-ink);
+  font-variant-numeric:tabular-nums;padding-top:2px;white-space:nowrap;
+}
+.ledger .what{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+.ledger .what strong{color:var(--ink);font-weight:600}
+.ledger .sub{margin:4px 0 0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.stats{display:flex;flex-wrap:wrap;gap:12px}
+.stat{
+  flex:1 1 180px;display:flex;align-items:baseline;gap:12px;
+  padding:14px 18px;border:1px solid var(--rule);border-radius:14px;background:var(--card);
+}
+.stat b{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1;color:var(--accent);letter-spacing:-.02em;white-space:nowrap}
+.stat span{font-size:13.5px;line-height:1.4;color:var(--ink-2)}
+.venues{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.venues li{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;color:var(--ink);padding:7px 14px;
+  border:1px solid var(--rule);border-radius:100px;background:var(--card);
+}
+.venues em{font-style:normal;font-size:12.5px;font-weight:600;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+
 /* ---------- nutshell ---------- */
 .nutshell{
   display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;align-items:center;
@@ -475,6 +505,7 @@ footer a:hover{border-bottom-color:var(--on-band)}
   .ticks a{height:3px;max-width:34px}
   .vids{grid-template-columns:1fr}
   .works li{grid-template-columns:1fr;gap:10px;padding:18px 0}
+  .ledger li{grid-template-columns:1fr;gap:4px;padding:14px 0}
   .works .cite,.works .chip,.works .note{grid-column:1;grid-row:auto}
   .nutshell{grid-template-columns:1fr;gap:26px;padding:16px 16px 26px;border-radius:18px}
   .nutshell p{padding:0 6px}
@@ -583,7 +614,7 @@ footer a:hover{border-bottom-color:var(--on-band)}
             <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M6 3H5v5a5 5 0 0 0 10 0V3h-1"/><path d="M10 13v2.5a5.5 5.5 0 0 0 11 0V13"/><circle cx="21" cy="11" r="2"/></svg></span>
           </div>
           <h3 class="t" id="t1">Should prevention messages differ by diagnosis?</h3>
-          <div class="ticks" aria-hidden="true"><a class="on" href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a></div>
+          <div class="ticks" aria-hidden="true"><a class="on" href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
         </aside>
         <div class="tbody">
           <p class="desc">Diagnosis is often treated as a clinical component. I ask whether it is also an audience characteristic: whether illness experiences change how people understand a health risk and how they respond to messages about it. My dissertation tests this with asthma and vaping. My goal is to listen to patients and develop health messages that reflect their lives, and through them, to improve their health.</p>
@@ -591,7 +622,7 @@ footer a:hover{border-bottom-color:var(--on-band)}
             <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9.5 13h6M9.5 17h6"/></svg>Related papers <span class="count">2</span></p>
             <ul>
               <li>
-                <p class="cite"><span class="me">Gu, B.</span> <em>How does asthma status shape perceptions of vaping and responses to vaping prevention messages?</em> Doctoral dissertation, University of North Carolina at Chapel Hill.</p>
+                <p class="cite"><span class="me">Gu, B.</span> <span class="ttl">How does asthma status shape perceptions of vaping and responses to vaping prevention messages?</span> <span class="ttl"><em>Doctoral dissertation</em>, University of North Carolina at Chapel Hill.</span></p>
                 <span class="chip dis"><svg class="ico" viewBox="0 0 24 24"><path d="M12 4L2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>Dissertation</span>
               </li>
               <li>
@@ -610,7 +641,7 @@ footer a:hover{border-bottom-color:var(--on-band)}
             <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg></span>
           </div>
           <h3 class="t" id="t2">Do prevention videos work, and which features matter?</h3>
-          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a class="on" href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a></div>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a class="on" href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
         </aside>
         <div class="tbody">
           <p class="desc">Prevention campaigns rely heavily on video, and I ask two questions about it. The first is whether these videos work at all, which I examine through meta-analysis of the existing evidence. The second is what in them works: campaigns are usually evaluated as wholes, so I break videos down into content and structural message features to find which ones are effective and, ultimately, a recipe for the most effective prevention video.</p>
@@ -667,7 +698,7 @@ footer a:hover{border-bottom-color:var(--on-band)}
             <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4h10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-3.5 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1.5v3L15 18h-4a2 2 0 0 1-2-2v-1"/></svg></span>
           </div>
           <h3 class="t" id="t3">What helps patients navigate language barriers in healthcare?</h3>
-          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a class="on" href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a></div>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a class="on" href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
         </aside>
         <div class="tbody">
           <p class="desc">A language barrier can affect every step of care, from understanding a diagnosis to deciding whether to come back. I study what helps patients whose first language is not English navigate that barrier. This includes professional interpreters, as well as the translation apps and generative AI that patients and health systems now use. I look at what works, what falls short, and how the support patients receive affects their trust in the health system and whether they stay in care.</p>
@@ -708,7 +739,7 @@ footer a:hover{border-bottom-color:var(--on-band)}
             <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></span>
           </div>
           <h3 class="t otherlabel" id="t4">Other topics</h3>
-          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a class="on" href="#topic-4" tabindex="-1"></a></div>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a class="on" href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
         </aside>
         <div class="tbody">
           <p class="othernote">Targeted communication for specific tobacco products, such as warnings, packaging, and prevention messages for cigars and blunts. This section also includes other work outside the three questions above.</p>
@@ -741,6 +772,126 @@ footer a:hover{border-bottom-color:var(--on-band)}
               </li>
             </ul>
           </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-h">
+    <div class="container">
+      <div class="shead">
+        <span class="badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg></span>
+        <h2 id="exp-h">Experience</h2>
+      </div>
+
+      <article class="topic" id="topic-5" aria-labelledby="t5">
+        <aside class="rail">
+          <div class="rtop">
+            <span class="n">05</span>
+            <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.6 13.4L7 21l5-2.6 5 2.6-1.6-7.6"/></svg></span>
+          </div>
+          <h3 class="t" id="t5">Grants &amp; Awards</h3>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a class="on" href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
+        </aside>
+        <div class="tbody">
+          <div class="block">
+            <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="2.5"/><path d="M6.5 9.5v.01M17.5 15.5v.01"/></svg>Grants</p>
+            <ul class="ledger">
+              <li><span class="when">2025&#8211;Present</span><div><p class="what"><strong>Principal Investigator</strong> &#183; Pilot grant, NIDA/FDA Center for Tobacco Products</p><p class="sub">Estimating the Effectiveness of Smoking and Vaping Prevention Videos: A Meta-Analysis</p></div></li>
+              <li><span class="when">2023&#8211;Present</span><div><p class="what"><strong>Predoctoral Trainee &amp; Graduate Research Assistant</strong> &#183; NIDA/FDA CTP, U54</p><p class="sub">Advancing Tobacco Regulatory Science to Reduce Health Disparities, Project 4: prevention ads for adolescents and young adults</p></div></li>
+              <li><span class="when">2025</span><div><p class="what"><strong>Graduate Research Assistant</strong> &#183; NIDA/FDA CTP, R01</p><p class="sub">Little Cigar and Cigarillo Warnings to Reduce Tobacco-Related Cancers and Disease</p></div></li>
+              <li><span class="when">2023&#8211;2024</span><div><p class="what"><strong>Graduate Research Assistant</strong> &#183; National Institutes of Health, R01</p><p class="sub">Impact of E-Cigarette Prevention Messages on Adolescents</p></div></li>
+              <li><span class="when">2019&#8211;2020</span><div><p class="what"><strong>Graduate Research Assistant</strong> &#183; Ministry of Health and Welfare, Korea</p><p class="sub">New types of cigarette marketing and governmental countermeasures</p></div></li>
+            </ul>
+          </div>
+          <div class="block">
+            <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4.5v1.5A3 3 0 0 0 7.5 10.5M17 6h2.5v1.5a3 3 0 0 1-3 3M12 14v3.5M8.5 20.5h7M9.5 20.5c0-1.7 1.1-3 2.5-3s2.5 1.3 2.5 3"/></svg>Honors</p>
+            <ul class="ledger">
+              <li><span class="when">2026</span><div><p class="what"><strong>Diversity and Inclusion Career Development Fellow</strong> &#183; Association for Education in Journalism and Mass Communication</p></div></li>
+              <li><span class="when">2026</span><div><p class="what"><strong>Top Six Honorable Mention Poster Award</strong> &#183; Kentucky Conference on Health Communication</p></div></li>
+              <li><span class="when">2025</span><div><p class="what"><strong>Student Scholarship</strong> &#183; North Carolina Korean Nurses Association</p></div></li>
+              <li><span class="when">2016</span><div><p class="what"><strong>Top Content Creator Award</strong> &#183; Korea Disease Control and Prevention Agency</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="topic" id="topic-6" aria-labelledby="t6">
+        <aside class="rail">
+          <div class="rtop">
+            <span class="n">06</span>
+            <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></span>
+          </div>
+          <h3 class="t" id="t6">Presentations &amp; Talks</h3>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a class="on" href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
+        </aside>
+        <div class="tbody">
+          <div class="stats">
+            <div class="stat"><b>12</b><span>Peer-reviewed conference presentations</span></div>
+            <div class="stat"><b>4</b><span>Invited talks &amp; guest lectures</span></div>
+          </div>
+          <div class="block">
+            <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Conferences</p>
+            <ul class="venues">
+              <li>Tobacco Regulatory Science Meeting<em>2024, 2026</em></li>
+              <li>International Communication Association<em>2025</em></li>
+              <li>Kentucky Conference on Health Communication<em>2026</em></li>
+              <li>Transcultural Nursing Society<em>2026</em></li>
+              <li>Korean Association of AD &amp; PR<em>2019</em></li>
+              <li>Korea Advertising Society<em>2019</em></li>
+            </ul>
+          </div>
+          <div class="block">
+            <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Invited talks</p>
+            <ul class="ledger">
+              <li><span class="when">Oct 2026</span><div><p class="what"><strong>Nurses as Message Creators: Lessons from Vaping Prevention Campaigns</strong></p><p class="sub">Doctor of Nursing Practice Immersion Day, School of Nursing, UNC Chapel Hill</p></div></li>
+              <li><span class="when">Apr 2026</span><div><p class="what"><strong>When language becomes a barrier</strong></p><p class="sub">Spring Graduate Research Colloquium, Hussman School of Journalism and Media, UNC Chapel Hill</p></div></li>
+              <li><span class="when">Feb 2026</span><div><p class="what"><strong>Vaping prevention video ads and communication strategies</strong></p><p class="sub">Guest lecture, Public Health Communication, University of Connecticut</p></div></li>
+              <li><span class="when">Oct 2025</span><div><p class="what"><strong>Online childhood survivorship materials for tobacco prevention</strong></p><p class="sub">Adolescent and Young Adult Research Working Group, Lineberger Comprehensive Cancer Center</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="topic" id="topic-7" aria-labelledby="t7">
+        <aside class="rail">
+          <div class="rtop">
+            <span class="n">07</span>
+            <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20l3-4M17 20l-3-4M7 8.5h6M7 11.5h9"/></svg></span>
+          </div>
+          <h3 class="t" id="t7">Teaching</h3>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a class="on" href="#topic-7" tabindex="-1"></a><a href="#topic-8" tabindex="-1"></a></div>
+        </aside>
+        <div class="tbody">
+          <ul class="ledger">
+            <li><span class="when">Fall 2026</span><div><p class="what"><strong>Teaching Assistant</strong> &#183; MEJO 890: Meta-Analysis</p><p class="sub">UNC Chapel Hill &#183; Applied sessions on meta-analysis methods and Comprehensive Meta-Analysis software</p></div></li>
+            <li><span class="when">Fall 2025</span><div><p class="what"><strong>Instructor of Record</strong> &#183; MEJO 379: Advertising &amp; Public Relations Research</p><p class="sub">UNC Chapel Hill &#183; Undergraduate research methods: surveys, experiments, content analysis, and data analysis</p></div></li>
+            <li><span class="when">2019&#8211;2020</span><div><p class="what"><strong>Teaching Assistant</strong> &#183; Sogang University</p><p class="sub">Health Communication; Marketing Communication; Creativity &amp; Visual Expression; Advertisement and Design Plans</p></div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="topic" id="topic-8" aria-labelledby="t8">
+        <aside class="rail">
+          <div class="rtop">
+            <span class="n">08</span>
+            <span class="tico" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+          </div>
+          <h3 class="t" id="t8">Clinical Practice</h3>
+          <div class="ticks" aria-hidden="true"><a href="#topic-1" tabindex="-1"></a><a href="#topic-2" tabindex="-1"></a><a href="#topic-3" tabindex="-1"></a><a href="#topic-4" tabindex="-1"></a><a href="#topic-5" tabindex="-1"></a><a href="#topic-6" tabindex="-1"></a><a href="#topic-7" tabindex="-1"></a><a class="on" href="#topic-8" tabindex="-1"></a></div>
+        </aside>
+        <div class="tbody">
+          <div class="stats">
+            <div class="stat"><b>RN</b><span>Registered Nurse, New York &amp; Korea</span></div>
+            <div class="stat"><b>110+</b><span>Childhood cancer survivors counseled</span></div>
+            <div class="stat"><b>3,000+</b><span>Health counseling sessions</span></div>
+          </div>
+          <ul class="ledger">
+            <li><span class="when">2021&#8211;2022</span><div><p class="what"><strong>Charge Nurse</strong> &#183; Cancer Survivor Center, National Cancer Center, Korea</p><p class="sub">Survivorship counseling, treatment summaries, and care plans for childhood cancer survivors</p></div></li>
+            <li><span class="when">2020&#8211;2021</span><div><p class="what"><strong>Assistant School Nurse</strong> &#183; Sanggye Middle School</p><p class="sub">COVID-19 prevention protocols and student health care</p></div></li>
+            <li><span class="when">2019</span><div><p class="what"><strong>Health Counseling Nurse</strong> &#183; Gangnam &amp; Gangbuk Community Health Centers</p><p class="sub">Mobile health app&#8211;supported counseling for adults with metabolic syndrome</p></div></li>
+            <li><span class="when">Training</span><div><p class="what"><strong>Smoking Cessation Counseling Expert</strong> &#183; <strong>Cancer Survivorship Expert</strong></p></div></li>
+          </ul>
         </div>
       </article>
     </div>
