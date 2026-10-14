@@ -227,40 +227,11 @@ h1{
   margin:0;color:var(--ink);text-wrap:balance;max-width:25em;
 }
 .lede em{font-style:normal}
+.qmark-end{display:inline-block;width:.78em;height:.78em;margin-left:.22em;vertical-align:-.02em;color:var(--gold)}
 .intro{
   margin:34px 0 0;padding-top:26px;border-top:1px solid var(--rule);
   font-size:18px;line-height:1.65;color:var(--ink-2);max-width:40em;
 }
-
-/* ---------- publication tally ---------- */
-.tally{padding:48px 0 0}
-.tally-row{
-  margin:0;display:flex;flex-wrap:wrap;align-items:stretch;
-  border:1px solid var(--rule);border-radius:100px;overflow:hidden;background:var(--card);
-}
-.tcell{
-  flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:10px;
-  padding:11px 20px;border-left:1px solid var(--rule-soft);
-}
-.tcell:first-child{border-left:0}
-.tcell dt{
-  display:flex;align-items:center;gap:9px;
-  font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap;
-}
-.tcell dd{
-  margin:0;font-size:13px;font-weight:600;line-height:1;color:var(--ink);
-  font-variant-numeric:tabular-nums;
-}
-.tdot{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none}
-.tdot .ico{width:11px;height:11px;stroke-width:2.4}
-.tcell.pub .tdot{background:var(--accent);color:var(--on-accent)}
-.tcell.acc .tdot{background:var(--accent-soft);color:var(--accent-ink)}
-.tcell.rev .tdot{background:var(--amber-soft);color:var(--amber)}
-.tcell.prep .tdot{border:1px dashed var(--muted);color:var(--muted)}
-.tcell.total{background:var(--accent)}
-.tcell.total dt{color:rgba(255,255,255,.85)}
-.tcell.total dt .ico{width:16px;height:16px}
-.tcell.total dd{color:#fff}
 
 /* ---------- sections ---------- */
 .section{padding:104px 0 40px}
@@ -473,13 +444,6 @@ footer a:hover{border-bottom-color:var(--on-band)}
   .thesis .container{grid-template-columns:1fr;gap:12px;padding-top:52px;padding-bottom:52px}
   .qmark{width:40px;height:40px}
   .section{padding:72px 0 16px}
-  .tally{padding-top:36px}
-  .tally-row{border-radius:14px}
-  .tcell{flex:1 1 45%;justify-content:space-between;padding:10px 14px;border-left:0;border-top:1px solid var(--rule-soft)}
-  .tcell:nth-child(odd):not(:first-child){border-left:1px solid var(--rule-soft)}
-  .tcell.total{flex-basis:100%;border-top:0}
-  .tcell dt{font-size:11.5px;letter-spacing:.04em}
-  .tcell dd{font-size:12.5px}
   .shead .badge{width:42px;height:42px;border-radius:12px}
 
   /* rail becomes a sticky header strip on narrow screens */
@@ -576,21 +540,9 @@ footer a:hover{border-bottom-color:var(--on-band)}
     <div class="container">
       <svg class="qmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M20 10C11 13 5 20 5 29c0 6 4 10 9 10 4.6 0 8-3.3 8-7.7 0-4.2-3-7.3-7.2-7.3-.8 0-1.6.1-2.2.3C13.6 19 16.6 15.4 21.4 13zm22 0c-9 3-15 10-15 19 0 6 4 10 9 10 4.6 0 8-3.3 8-7.7 0-4.2-3-7.3-7.2-7.3-.8 0-1.6.1-2.2.3.9-5.3 3.9-8.9 8.7-11.3z"/></svg>
       <div>
-        <p class="lede"><em>When health communication is designed broadly, whose risks and communication needs are not fully addressed?</em></p>
+        <p class="lede"><em>When health communication is designed broadly, whose risks and communication needs are not fully addressed?</em><svg class="qmark-end" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" transform="rotate(180 24 24)" d="M20 10C11 13 5 20 5 29c0 6 4 10 9 10 4.6 0 8-3.3 8-7.7 0-4.2-3-7.3-7.2-7.3-.8 0-1.6.1-2.2.3C13.6 19 16.6 15.4 21.4 13zm22 0c-9 3-15 10-15 19 0 6 4 10 9 10 4.6 0 8-3.3 8-7.7 0-4.2-3-7.3-7.2-7.3-.8 0-1.6.1-2.2.3.9-5.3 3.9-8.9 8.7-11.3z"/></svg></p>
         <p class="intro">I am a registered nurse and an interdisciplinary health communication researcher, working across communication, public health, and nursing.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="tally" aria-label="Publication summary">
-    <div class="container">
-      <dl class="tally-row">
-        <div class="tcell total"><dt><svg class="ico" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9.5 13h6M9.5 17h6"/></svg>Total</dt><dd data-count="all">15</dd></div>
-        <div class="tcell pub"><dt><span class="tdot"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Published</dt><dd data-count="pub">3</dd></div>
-        <div class="tcell acc"><dt><span class="tdot"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg></span>In press</dt><dd data-count="acc">1</dd></div>
-        <div class="tcell rev"><dt><span class="tdot"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>Under review</dt><dd data-count="rev">5</dd></div>
-        <div class="tcell prep"><dt><span class="tdot"><svg class="ico" viewBox="0 0 24 24"><path d="M14.5 5.5l4 4L8 20H4v-4z"/></svg></span>In preparation</dt><dd data-count="prep">6</dd></div>
-      </dl>
     </div>
   </section>
 
@@ -938,14 +890,6 @@ footer a:hover{border-bottom-color:var(--on-band)}
   }
   addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
   onScroll();
-
-  /* keep the publication tally in sync with the status chips */
-  var n={pub:0,acc:0,rev:0,prep:0},all=0;
-  document.querySelectorAll(".works .chip").forEach(function(c){
-    for(var k in n){if(c.classList.contains(k)){n[k]++;all++;}}
-  });
-  n.all=all;
-  document.querySelectorAll("[data-count]").forEach(function(d){d.textContent=n[d.getAttribute("data-count")];});
 
   if(!("IntersectionObserver" in window)){
     document.querySelectorAll(".rise").forEach(function(el){el.classList.add("in");});
