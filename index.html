@@ -408,19 +408,6 @@ h1{
 }
 .stat b{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1;color:var(--accent);letter-spacing:-.02em;white-space:nowrap}
 .stat span{font-size:13.5px;line-height:1.4;color:var(--ink-2)}
-.venues{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.venues li{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:14px;color:var(--ink);padding:7px 14px;
-  border:1px solid var(--rule);border-radius:100px;background:var(--card);
-}
-.venues em{white-space:nowrap;font-style:normal;font-size:12.5px;font-weight:600;color:var(--accent-ink);font-variant-numeric:tabular-nums}
-.venues .vn{
-  min-width:22px;height:22px;padding:0 6px;margin-right:-6px;border-radius:100px;
-  display:inline-grid;place-items:center;
-  font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;
-  background:var(--accent);color:var(--on-accent);
-}
 
 /* ---------- nutshell ---------- */
 .nutshell{
@@ -512,8 +499,6 @@ footer a:hover{border-bottom-color:var(--on-band)}
   .vids{grid-template-columns:1fr}
   .works li{grid-template-columns:1fr;gap:10px;padding:18px 0}
   .ledger li{grid-template-columns:1fr;gap:4px;padding:14px 0}
-  .venues li{border-radius:14px;width:100%}
-  .venues em{margin-left:auto}
   .works .cite,.works .chip,.works .note{grid-column:1;grid-row:auto}
   .nutshell{grid-template-columns:1fr;gap:26px;padding:16px 16px 26px;border-radius:18px}
   .nutshell p{padding:0 6px}
@@ -840,13 +825,19 @@ footer a:hover{border-bottom-color:var(--on-band)}
           </div>
           <div class="block">
             <p class="workslabel"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Conferences</p>
-            <ul class="venues">
-              <li>Tobacco Regulatory Science Meeting<em>2024, 2026</em><span class="vn" aria-label="6 presentations">6</span></li>
-              <li>International Communication Association<em>2025</em><span class="vn" aria-label="1 presentation">1</span></li>
-              <li>Kentucky Conference on Health Communication<em>2026</em><span class="vn" aria-label="2 presentations">2</span></li>
-              <li>Transcultural Nursing Society<em>2026</em><span class="vn" aria-label="1 presentation">1</span></li>
-              <li>Korean Association of AD &amp; PR<em>2019</em><span class="vn" aria-label="1 presentation">1</span></li>
-              <li>Korea Advertising Society<em>2019</em><span class="vn" aria-label="1 presentation">1</span></li>
+            <ul class="ledger">
+              <li><span class="when">Oct 2026</span><div><p class="what"><strong>When language becomes a barrier: Communication, organization&#8211;public relationships, and behavioral intentions in U.S. healthcare</strong></p><p class="sub">Upcoming &#183; Transcultural Nursing Society Annual Conference, San Antonio, TX</p></div></li>
+              <li><span class="when">Jul 2026</span><div><p class="what"><strong>Do structural features of vaping prevention video ads elicit PMSV? An experiment with adolescents and young adults</strong></p><p class="sub">Oral &#183; Tobacco Regulatory Science Meeting, Bethesda, MD</p></div></li>
+              <li><span class="when">Jul 2026</span><div><p class="what"><strong>Identifying promising message features of vaping prevention video ads: An experiment with adolescents and young adults</strong></p><p class="sub">Oral &#183; Tobacco Regulatory Science Meeting, Bethesda, MD</p></div></li>
+              <li><span class="when">Jul 2026</span><div><p class="what"><strong>Assessing the effectiveness of smoking and vaping prevention campaign videos: A meta-analysis</strong></p><p class="sub">Poster &#183; Tobacco Regulatory Science Meeting, Bethesda, MD</p></div></li>
+              <li><span class="when">Jul 2026</span><div><p class="what"><strong>From field to screen: Content analysis of vaping prevention video advertisements</strong></p><p class="sub">Poster &#183; Tobacco Regulatory Science Meeting, Bethesda, MD</p></div></li>
+              <li><span class="when">Apr 2026</span><div><p class="what"><strong>Estimating the effectiveness of smoking and vaping prevention video advertisements: A meta-analysis</strong></p><p class="sub">Oral &#183; Kentucky Conference on Health Communication, Lexington, KY</p></div></li>
+              <li><span class="when">Apr 2026</span><div><p class="what"><strong>Addressing content features and gaps in online childhood cancer survivorship materials for tobacco prevention: A content analysis</strong></p><p class="sub">Poster &#183; Kentucky Conference on Health Communication, Lexington, KY</p></div></li>
+              <li><span class="when">Jun 2025</span><div><p class="what"><strong>Beyond childhood: The impact of family literacy practices and subjective norms on lifelong reading habits</strong></p><p class="sub">Oral &#183; International Communication Association, Denver, CO</p></div></li>
+              <li><span class="when">Oct 2024</span><div><p class="what"><strong>Center-wide activities to address health equity in UNC TCORS</strong></p><p class="sub">Oral &#183; Tobacco Regulatory Science Meeting, Bethesda, MD</p></div></li>
+              <li><span class="when">Oct 2024</span><div><p class="what"><strong>Characterizing the features of vaping prevention video ads: A content analysis</strong></p><p class="sub">Poster &#183; Tobacco Regulatory Science Meeting, Bethesda, MD</p></div></li>
+              <li><span class="when">Nov 2019</span><div><p class="what"><strong>Studying the effects of advertisements promoting chronic disease management</strong></p><p class="sub">Oral &#183; Korean Association of AD &amp; PR, Ansan, Korea</p></div></li>
+              <li><span class="when">Oct 2019</span><div><p class="what"><strong>Different perspectives on public PR: Comparing policy consumers, practitioners, and related professionals</strong></p><p class="sub">Oral &#183; Korea Advertising Society, Cheongju, Korea</p></div></li>
             </ul>
           </div>
           <div class="block">
